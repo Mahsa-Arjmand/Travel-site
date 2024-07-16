@@ -1,0 +1,15 @@
+{% load blog_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form test</title>
+</head>
+<body>
+ <form action="{% url 'website:test' %}" method="post">
+     {% csrf_token %}
+     {{ form.as_p }}
+     <button type="submit">submit</button>
+ </form>
+</body>
+</html>
